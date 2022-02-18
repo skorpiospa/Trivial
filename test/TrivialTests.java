@@ -28,4 +28,14 @@ public class TrivialTests {
         //Comprobación
         Assert.assertEquals(mensajePosicion,result);
     }
+
+
+    @Test
+    public void el_numero_de_jugadores_debe_ser_de_al_menos_2_jugadores () {
+        //Preparación
+        Game juego=new Game();
+        juego.agregar("Javier");
+
+
+    }
 }
