@@ -31,11 +31,26 @@ public class TrivialTests {
 
 
     @Test
-    public void el_numero_de_jugadores_debe_ser_de_al_menos_2_jugadores () {
+    public void el_numero_de_jugadores_es_de_menos_de_2_jugadores () {
         //Preparación
         Game juego=new Game();
         juego.agregar("Javier");
-
-
+        //Ejecucion
+        boolean resultMenor2Jugadores=juego.esJugable();
+        //Comprobacion
+        Assert.assertEquals(false,resultMenor2Jugadores);
     }
+
+    @Test
+    public void el_numero_de_jugadores_es_de_2_jugadores () {
+        //Preparación
+        Game juego = new Game();
+        juego.agregar("Javier");
+        juego.agregar("Maria");
+        //Ejecucion
+        boolean result = juego.esJugable();
+        //Comprobacion
+        Assert.assertEquals(true, result);
+    }
+
 }
