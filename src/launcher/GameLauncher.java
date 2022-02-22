@@ -11,28 +11,36 @@ public class GameLauncher {
 
     public static void main(String[] args) {
         Game juego = new Game();
-
-        juego.agregar("Maria");
-        juego.agregar("Maria");
-
-
-        Random rand = new Random();
-        if (juego.esJugable() == true) {
-            do {
-
-                juego.tirarDado(rand.nextInt(5) + 1);
-
-                if (rand.nextInt(9) == 7) {
-                    noGanador = juego.respuestaIncorrecta();
-                } else {
-                    noGanador = juego.fueRespuestaCorrecta();
-                }
+        try {
+            juego.agregar("Juan");
+            juego.agregar("Abraham");
+            juego.agregar("Carmen");
+            juego.agregar("Maria");
+            juego.agregar("Luis");
+            juego.agregar("Pedro");
+            juego.agregar("Javier");
 
 
-            } while (noGanador);
-        } else {
-            System.out.println("No se puede iniciar la partida con menos de 2 jugadores");
+            Random rand = new Random();
+            if (juego.esJugable() == true) {
+                do {
+
+                    juego.tirarDado(rand.nextInt(5) + 1);
+
+                    if (rand.nextInt(9) == 7) {
+                        noGanador = juego.respuestaIncorrecta();
+                    } else {
+                        noGanador = juego.fueRespuestaCorrecta();
+                    }
+
+
+                } while (noGanador);
+            } else {
+                System.out.println("No se puede iniciar la partida con menos de 2 jugadores");
+            }
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Ha superado el limite de 6 jugadores, por lo que mantendremos el maximo para empezar la partida");
+
         }
     }
-
 }
