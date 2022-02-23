@@ -25,8 +25,8 @@ public class Game {
                 preguntasCiencias.addLast(("Pregunta de Ciencias " + (i + 1)));
                 preguntasDeportes.addLast(("Pregunta de Deportes " + (i + 1)));
                 preguntasMusica.addLast("Pregunta de Música " + (i + 1));
+                number++;
             }
-            System.out.println("SE HA SUPERADO EL LIMITE DE PREGUNTAS, REINICIAMOS PREGUNTAS");
             number = 0;
         }
     }
