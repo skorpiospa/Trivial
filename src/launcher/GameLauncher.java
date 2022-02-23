@@ -14,15 +14,9 @@ public class GameLauncher {
         try {
             juego.agregar("Juan");
             juego.agregar("Abraham");
-            juego.agregar("Carmen");
-            juego.agregar("Maria");
-            juego.agregar("Luis");
-            juego.agregar("Pedro");
-            juego.agregar("Javier");
-
 
             Random rand = new Random();
-            if (juego.esJugable() == true) {
+            if (juego.esJugable()  == true) {
                 do {
 
                     juego.tirarDado(rand.nextInt(5) + 1);

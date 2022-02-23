@@ -35,7 +35,7 @@ public class Game {
             System.out.println("No se puede iniciar la partida con menos de 2 jugadores");
             return false;
         }
-        else if (cuantosJugadores() < 6){
+        else if (cuantosJugadores() > 6){
                 System.out.println("Ha superado el limite de 6 jugadores, por lo que mantendremos el maximo para empezar la partida");
                 return false;
             }
@@ -67,7 +67,7 @@ public class Game {
         if (enCasillaCastigo[jugadorActual]) {
             if (puntosDado % 2 != 0) {
                 estaSaliendoDeLaCarcel = true;
-
+                enCasillaCastigo[cuantosJugadores()] = false;
                 System.out.println(jugadores.get(jugadorActual) + " sale de la casilla de castigo");
                 posiciones[jugadorActual] = posiciones[jugadorActual] + puntosDado;
                 if (posiciones[jugadorActual] > 11) posiciones[jugadorActual] = posiciones[jugadorActual] - 12;

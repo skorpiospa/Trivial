@@ -4,10 +4,7 @@ import org.junit.jupiter.api.Test;
 import smellytrivial.Game;
 
 public class TrivialTests {
-    @Test
-    public void true_is_true() {
-        Assertions.assertTrue(true);
-    }
+
 
     @Test
     public void crear_Game() {
@@ -66,7 +63,7 @@ public class TrivialTests {
 
         //Ejecucion
         boolean result = juego.esJugable();
-        Assert.assertFalse(result);
+        Assert.assertTrue(result);
     }
 
     @Test()
@@ -84,7 +81,7 @@ public class TrivialTests {
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Ha superado el limite de 6 jugadores, por lo que mantendremos el maximo para empezar la partida");
         }
-        //Ejecucion
+        //Ejecucion, tiene que dar el error de ArrayIndexOutofBound.
         juego.esJugable();
     }
 
@@ -99,7 +96,7 @@ public class TrivialTests {
             System.out.println("No se puede iniciar la partida con menos de 2 jugadores");
         }
 
-        //Ejecucion
+        //Ejecucion  --
         juego.esJugable();
     }
 
