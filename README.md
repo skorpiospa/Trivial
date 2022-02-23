@@ -22,3 +22,10 @@ Creamos dos test unitarios:
  indicando un mensaje en el caso de que este numero se supere. Asimismo, se ha creado en la clase Game_launcher
  el try_catch para que en el caso de que se lance la excepcion de ArrayOutForBands nos aparezca un mensaje.
  
+ #Problema 3
+ 
+ Se ha modificado el metodo tiraDado para que cuando salga un numero impar al estar en la carcel, salga de ella y se 
+ guarde dicho valor para que en la proxima tirada no se quede bloqueado dentro por no actualizarse el estado.
+ 
+ enCasillaCastigo[cuantosJugadores()] = false; 
+ 
