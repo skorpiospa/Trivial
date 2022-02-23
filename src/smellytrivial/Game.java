@@ -129,21 +129,21 @@ public class Game {
     public boolean fueRespuestaCorrecta() {
         if (enCasillaCastigo[jugadorActual]=false) {
             if (estaSaliendoDeLaCarcel) {
-                respuestaCorrectaYMuestraInformacionMonedas();
-
-                boolean ganador = jugadorHaGanado();
-                siguienteJugador();
-                return ganador;
+                return respuestaCorrectaSiguienteJugador();
             } else {
                 siguienteJugador();
                 return true;
             }
         } else {
-            respuestaCorrectaYMuestraInformacionMonedas();
-            boolean ganador = jugadorHaGanado();
-            siguienteJugador();
-            return ganador;
+            return respuestaCorrectaSiguienteJugador();
         }
+    }
+
+    private boolean respuestaCorrectaSiguienteJugador() {
+        respuestaCorrectaYMuestraInformacionMonedas();
+        boolean ganador = jugadorHaGanado();
+        siguienteJugador();
+        return ganador;
     }
 
     private void respuestaCorrectaYMuestraInformacionMonedas() {

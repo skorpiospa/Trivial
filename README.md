@@ -29,15 +29,16 @@ Creamos dos test unitarios:
  
  enCasillaCastigo[cuantosJugadores()] = false; 
  
- #Problema 4
- 
- Se ha refactorizado codigo que se encontraba dentro del metodo fuerespuestaCorrecta, sacando el codigo que muestra por 
- pantalla la informacion de la respuesta correcta y las monedas que posee a un metodo private.
- 
  #Problema 5
  
  Se ha extraido codigo y refactorizado codigo del metodo "fueRespuestaCorrecta", sacado en codigo a un metodo para
  cuando salta al siguiente jugador.
+
+#Problema 6
+
+ Se ha refactorizado codigo que se encontraba dentro del metodo fuerespuestaCorrecta, sacando el codigo que muestra por 
+ pantalla la informacion de la respuesta correcta y las monedas que posee a un metodo private.
+
  
  
  

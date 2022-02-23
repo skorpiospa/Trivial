@@ -1,4 +1,4 @@
-import org.junit.Assert;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import smellytrivial.Game;
@@ -23,7 +23,7 @@ public class TrivialTests {
         //Ejecucion
         String result = juego.nuevaPosicionJugador();
         //Comprobación
-        Assert.assertEquals(mensajePosicion, result);
+        Assertions.assertEquals(mensajePosicion, result);
     }
 
 
@@ -35,7 +35,7 @@ public class TrivialTests {
         //Ejecucion
         boolean resultMenor2Jugadores = juego.esJugable();
         //Comprobacion
-        Assert.assertEquals(false, resultMenor2Jugadores);
+        Assertions.assertEquals(false, resultMenor2Jugadores);
     }
 
     @Test
@@ -47,7 +47,7 @@ public class TrivialTests {
         //Ejecucion
         boolean result = juego.esJugable();
         //Comprobacion
-        Assert.assertEquals(true, result);
+        Assertions.assertEquals(true, result);
     }
 
     @Test()
@@ -63,7 +63,7 @@ public class TrivialTests {
 
         //Ejecucion
         boolean result = juego.esJugable();
-        Assert.assertTrue(result);
+        Assertions.assertTrue(result);
     }
 
     @Test()
