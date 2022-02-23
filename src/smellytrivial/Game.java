@@ -69,9 +69,7 @@ public class Game {
                 estaSaliendoDeLaCarcel = true;
                 enCasillaCastigo[cuantosJugadores()] = false;
                 System.out.println(jugadores.get(jugadorActual) + " sale de la casilla de castigo");
-                posiciones[jugadorActual] = posiciones[jugadorActual] + puntosDado;
-                if (posiciones[jugadorActual] > 11) posiciones[jugadorActual] = posiciones[jugadorActual] - 12;
-
+                posicionJugadorActual(puntosDado);
                 nuevaPosicionJugador();
                 System.out.println("La categoría es " + categoriaActual());
                 hacerPregunta();
@@ -82,14 +80,18 @@ public class Game {
 
         } else {
 
-            posiciones[jugadorActual] = posiciones[jugadorActual] + puntosDado;
-            if (posiciones[jugadorActual] > 11) posiciones[jugadorActual] = posiciones[jugadorActual] - 12;
+            posicionJugadorActual(puntosDado);
 
             nuevaPosicionJugador();
             System.out.println("La categoría es " + categoriaActual());
             hacerPregunta();
         }
 
+    }
+
+    private void posicionJugadorActual(int puntosDado) {
+        posiciones[jugadorActual] = posiciones[jugadorActual] + puntosDado;
+        if (posiciones[jugadorActual] > 11) posiciones[jugadorActual] = posiciones[jugadorActual] - 12;
     }
 
     public String nuevaPosicionJugador() {
@@ -135,13 +137,11 @@ public class Game {
                         + " monedas doradas.");
 
                 boolean ganador = jugadorHaGanado();
-                jugadorActual++;
-                if (jugadorActual == jugadores.size()) jugadorActual = 0;
+                siguienteJugador();
 
                 return ganador;
             } else {
-                jugadorActual++;
-                if (jugadorActual == jugadores.size()) jugadorActual = 0;
+                siguienteJugador();
                 return true;
             }
 
@@ -156,8 +156,7 @@ public class Game {
                     + " monedas doradas.");
 
             boolean ganador = jugadorHaGanado();
-            jugadorActual++;
-            if (jugadorActual == jugadores.size()) jugadorActual = 0;
+            siguienteJugador();
 
             return ganador;
         }
@@ -168,13 +167,18 @@ public class Game {
         System.out.println(jugadores.get(jugadorActual) + " va a la casilla de castigo");
         enCasillaCastigo[jugadorActual] = true;
 
+        siguienteJugador();
+        return true;
+    }
+
+    private void siguienteJugador() {
         jugadorActual++;
         if (jugadorActual == jugadores.size()) jugadorActual = 0;
-        return true;
     }
 
 
     private boolean jugadorHaGanado() {
         return !(monederos[jugadorActual] == 6);
+
     }
 }

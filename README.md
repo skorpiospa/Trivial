@@ -29,3 +29,9 @@ Creamos dos test unitarios:
  
  enCasillaCastigo[cuantosJugadores()] = false; 
  
+ #Problema 5
+ 
+ Se ha extraido codigo y refactorizado codigo del metodo "fueRespuestaCorrecta", sacado en codigo a un metodo para
+ cuando salta al siguiente jugador.
+ 
+ 

@@ -16,7 +16,7 @@ public class GameLauncher {
             juego.agregar("Abraham");
 
             Random rand = new Random();
-            if (juego.esJugable()  == true) {
+            if (juego.esJugable() == true) {
                 do {
 
                     juego.tirarDado(rand.nextInt(5) + 1);
