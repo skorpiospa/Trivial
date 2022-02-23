@@ -18,16 +18,12 @@ public class Game {
     boolean estaSaliendoDeLaCarcel;
 
     public Game() {
-        for (int i = 0; i < 50; i++) {
-            preguntasCultura.addLast("Pregunta de Cultura " + i);
-            preguntasCiencias.addLast(("Pregunta de Ciencias " + i));
-            preguntasDeportes.addLast(("Pregunta de Deportes " + i));
-            preguntasMusica.addLast(crearPreguntaMusica(i));
+        for (int i = 0; i <= 50; i++) {
+            preguntasCultura.addLast("Pregunta de Cultura " + (i+1));
+            preguntasCiencias.addLast(("Pregunta de Ciencias " + (i+1)));
+            preguntasDeportes.addLast(("Pregunta de Deportes " + (i+1)));
+            preguntasMusica.addLast("Pregunta de Música " + (i+1));
         }
-    }
-
-    public String crearPreguntaMusica(int index) {
-        return "Pregunta de Música " + index;
     }
 
     public boolean esJugable() throws ArrayIndexOutOfBoundsException {
