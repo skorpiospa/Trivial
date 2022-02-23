@@ -39,6 +39,13 @@ Creamos dos test unitarios:
  Se ha refactorizado codigo que se encontraba dentro del metodo fuerespuestaCorrecta, sacando el codigo que muestra por 
  pantalla la informacion de la respuesta correcta y las monedas que posee a un metodo private.
 
+#Problema 7
+
+ Se ha modificado el codigo del metodo Game el cual contiene un for conntrolando el numero de preguntas realizadas,
+eliminando primeramente el metodo que solicitaba preguntas solo de musica y añadiendolo al conjunto de las distintas
+sentencias que hacian lo mismo. Igualmente, se ha creado una nueva variable que hace que continuamente sea 0 al llegar 
+al maximo establecido de 50, por lo que seguira lanzando preguntas.
+
  
  
  
