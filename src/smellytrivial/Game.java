@@ -48,9 +48,9 @@ public class Game {
 
     public boolean agregar(String playerName) {
         jugadores.add(playerName);
-        posiciones[cuantosJugadores()] = 0;
-        monederos[cuantosJugadores()] = 0;
-        enCasillaCastigo[cuantosJugadores()] = false;
+        posiciones[cuantosJugadores()-1] = 0;
+        monederos[cuantosJugadores()-1] = 0;
+        enCasillaCastigo[cuantosJugadores()-1] = false;
         System.out.println(playerName + " se ha unido a la partida");
         System.out.println("Es el jugador número " + jugadores.size());
         return true;
@@ -125,7 +125,7 @@ public class Game {
     }
 
     public boolean fueRespuestaCorrecta() {
-        if (enCasillaCastigo[jugadorActual]) {
+        if (enCasillaCastigo[jugadorActual]=false) {
             if (estaSaliendoDeLaCarcel) {
                 System.out.println("Respuesta correcta!!!!");
                 monederos[jugadorActual]++;

@@ -100,5 +100,32 @@ public class TrivialTests {
         juego.esJugable();
     }
 
+    @Test
+    public void comprobacion_entra_y_sale_de_la_carcel (){
+
+        Game juego=new Game();
+
+        juego.agregar("Javier");
+        juego.agregar("Maria");
+        juego.esJugable();
+        juego.tirarDado(4);
+        juego.fueRespuestaCorrecta();
+        juego.tirarDado(2);
+        juego.fueRespuestaCorrecta();
+        juego.tirarDado(3);
+        juego.respuestaIncorrecta();
+        juego.tirarDado(1);
+        juego.respuestaIncorrecta();
+        juego.tirarDado(1);
+        juego.fueRespuestaCorrecta();
+        juego.tirarDado(3);
+        juego.fueRespuestaCorrecta();
+        juego.tirarDado(5);
+        juego.fueRespuestaCorrecta();
+        juego.tirarDado(2);
+        juego.fueRespuestaCorrecta();
+
+    }
+
 }
 
