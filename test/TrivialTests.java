@@ -129,5 +129,19 @@ public class TrivialTests {
 
     }
 
+    @Test
+    public void respuesta_correcta_mensaje_monedas_y_siguiente_jugador () {
+        //Preparacion
+        Game juego=new Game();
+        juego.agregar("Juan");
+        juego.agregar("Laura");
+        juego.tirarDado(3);
+        //Ejecucion
+        juego.fueRespuestaCorrecta();
+        //Comprobacion
+        Assertions.assertTrue(juego.fueRespuestaCorrecta());
+    }
+
+
 }
 

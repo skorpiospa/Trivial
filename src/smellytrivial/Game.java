@@ -18,11 +18,16 @@ public class Game {
     boolean estaSaliendoDeLaCarcel;
 
     public Game() {
-        for (int i = 0; i <= 50; i++) {
-            preguntasCultura.addLast("Pregunta de Cultura " + (i+1));
-            preguntasCiencias.addLast(("Pregunta de Ciencias " + (i+1)));
-            preguntasDeportes.addLast(("Pregunta de Deportes " + (i+1)));
-            preguntasMusica.addLast("Pregunta de Música " + (i+1));
+        int number = 0;
+        if (number < 50) {
+            for (int i = 0; i <= 50; i++) {
+                preguntasCultura.addLast("Pregunta de Cultura " + (i + 1));
+                preguntasCiencias.addLast(("Pregunta de Ciencias " + (i + 1)));
+                preguntasDeportes.addLast(("Pregunta de Deportes " + (i + 1)));
+                preguntasMusica.addLast("Pregunta de Música " + (i + 1));
+            }
+            System.out.println("SE HA SUPERADO EL LIMITE DE PREGUNTAS, REINICIAMOS PREGUNTAS");
+            number = 0;
         }
     }
 
@@ -30,12 +35,10 @@ public class Game {
         if (cuantosJugadores() < 2) {
             System.out.println("No se puede iniciar la partida con menos de 2 jugadores");
             return false;
-        }
-        else if (cuantosJugadores() > 6){
-                System.out.println("Ha superado el limite de 6 jugadores, por lo que mantendremos el maximo para empezar la partida");
-                return false;
-            }
-        else {
+        } else if (cuantosJugadores() > 6) {
+            System.out.println("Ha superado el limite de 6 jugadores, por lo que mantendremos el maximo para empezar la partida");
+            return false;
+        } else {
             System.out.println("La partida puede empezar");
             return true;
         }
@@ -44,9 +47,9 @@ public class Game {
 
     public boolean agregar(String playerName) {
         jugadores.add(playerName);
-        posiciones[cuantosJugadores()-1] = 0;
-        monederos[cuantosJugadores()-1] = 0;
-        enCasillaCastigo[cuantosJugadores()-1] = false;
+        posiciones[cuantosJugadores() - 1] = 0;
+        monederos[cuantosJugadores() - 1] = 0;
+        enCasillaCastigo[cuantosJugadores() - 1] = false;
         System.out.println(playerName + " se ha unido a la partida");
         System.out.println("Es el jugador número " + jugadores.size());
         return true;
@@ -123,7 +126,7 @@ public class Game {
     }
 
     public boolean fueRespuestaCorrecta() {
-        if (enCasillaCastigo[jugadorActual]=false) {
+        if (enCasillaCastigo[jugadorActual] = false) {
             if (estaSaliendoDeLaCarcel) {
                 return respuestaCorrectaSiguienteJugador();
             } else {
