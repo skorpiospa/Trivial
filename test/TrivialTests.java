@@ -125,6 +125,8 @@ public class TrivialTests {
         juego.tirarDado(2);
         juego.fueRespuestaCorrecta();
 
+        // Se comprueba en el codigo que una vez ha salido de la carcel no vuelve a aparecer como que se encuentra en ella.
+
     }
 
 }
