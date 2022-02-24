@@ -29,6 +29,11 @@ Creamos dos test unitarios:
  
  enCasillaCastigo[cuantosJugadores()] = false; 
  
+ #Problema 4
+ 
+ Se ha modificado el metodo "jugadorHaGanado", eliminando la exclamacion que negaba el momento en el que se retornaba  
+n los datos de las monedas y jugador cuando este era igual a 6.
+ 
  #Problema 5
  
  Se ha extraido codigo y refactorizado codigo del metodo "fueRespuestaCorrecta", sacado en codigo a un metodo para
