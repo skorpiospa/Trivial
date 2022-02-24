@@ -26,7 +26,7 @@ public class Game {
                 preguntasDeportes.addLast(("Pregunta de Deportes " + (number)));
                 preguntasMusica.addLast("Pregunta de Música " + (number));
             }
-            number=0;
+            number=1;
         }
     }
 
@@ -169,7 +169,7 @@ public class Game {
 
 
     private boolean jugadorHaGanado() {
-        return !(monederos[jugadorActual] == 6);
+        return (monederos[jugadorActual] == 6);
 
     }
 }
