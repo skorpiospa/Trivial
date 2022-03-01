@@ -31,11 +31,8 @@ Creamos dos test unitarios:
  
  #Problema 4
  
-<<<<<<< HEAD
  Se ha cambiado el No ganador en GameLauncher por Ganador.
-=======
- Se ha modificado el nombre de noganador por ganador.
->>>>>>> 6ec5fd0b5f3bfcde7cfd5457ab65139abe778c1e
+
  
  #Problema 5
  
