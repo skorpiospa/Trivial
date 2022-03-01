@@ -31,8 +31,7 @@ Creamos dos test unitarios:
  
  #Problema 4
  
- Se ha modificado el metodo "jugadorHaGanado", eliminando la exclamacion que negaba el momento en el que se retornaba  
-n los datos de las monedas y jugador cuando este era igual a 6.
+ Se ha cambiado el No ganador en GameLauncher por Ganador.
  
  #Problema 5
  

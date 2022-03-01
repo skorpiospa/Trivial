@@ -139,7 +139,7 @@ public class TrivialTests {
         //Ejecucion
         juego.fueRespuestaCorrecta();
         //Comprobacion
-        Assertions.assertTrue(juego.fueRespuestaCorrecta());
+
     }
 
 
